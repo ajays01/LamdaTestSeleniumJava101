@@ -1,3 +1,9 @@
+image: maven:3.8.5-openjdk-17
+
 tasks:
-  - init: mvn clean install -DskipTests
-    command: mvn test
+  - init: |
+      echo "🔵 Setting up Maven Dependencies..."
+      mvn dependency:go-offline
+  - command: |
+      echo "🟢 Running Selenium Tests..."
+      mvn test -DsuiteXmlFile=testng.xml
