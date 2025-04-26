@@ -11,8 +11,8 @@ import com.qa.CapabilitiesGenerator;
 
 public class Base {
     protected WebDriver driver;
-    protected String username = "ajaysonawane10";
-    protected String accessKey = "LT_UgRTB7lrVCtziwzEI6f7i4UwGvRMq9R7PDlSfsxUIebky9A";
+    protected String username = "ajaysonawane10outlookcom";
+    protected String accessKey = "LT_N4GxkwLXBrkZFzeytoscKgwi1e9yZMwwsQNBcZ5R9EMnNi1";
 
     @BeforeMethod(alwaysRun = true)
     public void setUp(Object[] data) throws MalformedURLException {
