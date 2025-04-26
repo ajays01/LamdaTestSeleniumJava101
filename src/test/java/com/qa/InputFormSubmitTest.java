@@ -7,9 +7,9 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class InputFormSubmitTest extends Base {
+public class InputFormSubmitTest extends BaseTest {
 
-    @Test(dataProvider = "browsers", dataProviderClass = DataProvider.class)
+    @Test
     public void testInputFormSubmit() throws InterruptedException {
         driver.get("https://www.lambdatest.com/selenium-playground");  // [cite: 7]
         driver.findElement(By.linkText("Input Form Submit")).click();  // [cite: 7]

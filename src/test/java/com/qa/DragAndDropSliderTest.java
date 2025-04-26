@@ -7,9 +7,9 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class DragAndDropSliderTest extends Base {
+public class DragAndDropSliderTest extends BaseTest {
 
-    @Test(dataProvider = "browsers", dataProviderClass = DataProvider.class)
+    @Test
     public void testDragAndDropSlider() throws InterruptedException {
         driver.get("https://www.lambdatest.com/selenium-playground");  // [cite: 6]
         driver.findElement(By.linkText("Drag & Drop Sliders")).click();  // [cite: 6]

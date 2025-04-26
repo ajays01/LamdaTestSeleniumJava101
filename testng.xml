@@ -1,23 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="LambdaTest_SeleniumJava101_Suite" parallel="classes" thread-count="4" time-out="20000">
-
-    <test name="SimpleFormTest">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium Java 101 Tests" parallel="classes" thread-count="3">
+    <test name="ChromeTests">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="128.0"/>
+        <parameter name="platform" value="Windows 10"/>
         <classes>
-            <class name="com.qa.SimpleFormDemoTest" />
+            <class name="com.qa.SimpleFormDemoTest"/>
+            <class name="com.qa.DragAndDropSliderTest"/>
+            <class name="com.qa.InputFormSubmitTest"/>
         </classes>
     </test>
 
-    <test name="DragDropSliderTest">
+    <test name="EdgeTests">
+        <parameter name="browser" value="edge"/>
+        <parameter name="version" value="127.0"/>
+        <parameter name="platform" value="macOS Ventura"/>
         <classes>
-            <class name="com.qa.DragAndDropSliderTest" />
+            <class name="com.qa.SimpleFormDemoTest"/>
+            <class name="com.qa.DragAndDropSliderTest"/>
+            <class name="com.qa.InputFormSubmitTest"/>
         </classes>
     </test>
 
-    <test name="InputFormSubmitTest">
+    <test name="FirefoxTests">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="version" value="130.0"/>
+        <parameter name="platform" value="Windows 11"/>
         <classes>
-            <class name="com.qa.InputFormSubmitTest" />
+            <class name="com.qa.SimpleFormDemoTest"/>
+            <class name="com.qa.DragAndDropSliderTest"/>
+            <class name="com.qa.InputFormSubmitTest"/>
         </classes>
     </test>
 
+    <test name="IETests" enabled="false">
+        <parameter name="browser" value="internet explorer"/>
+        <parameter name="version" value="11.0"/>
+        <parameter name="platform" value="Windows 10"/>
+        <classes>
+            <class name="com.qa.SimpleFormDemoTest"/>
+            <class name="com.qa.DragAndDropSliderTest"/>
+            <class name="com.qa.InputFormSubmitTest"/>
+        </classes>
+    </test>
 </suite>

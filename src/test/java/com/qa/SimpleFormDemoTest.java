@@ -6,9 +6,9 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class SimpleFormDemoTest extends Base {
+public class SimpleFormDemoTest extends BaseTest {
 
-    @Test(dataProvider = "browsers", dataProviderClass = DataProvider.class)
+    @Test
     public void testSimpleFormDemo() {
         driver.get("https://www.lambdatest.com/selenium-playground");  // [cite: 1]
         driver.findElement(By.linkText("Simple Form Demo")).click();  // [cite: 2]  Locator: LinkText
